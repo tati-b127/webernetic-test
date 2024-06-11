@@ -11,28 +11,35 @@
 
 <body>
     <div class="banner">
-        <div class="banner__inner">
-            <h1 class="banner__title">
-                Демо-версия
-            </h1>
-            <p class="banner__descr">За 18 лет деятельности было реализовано более 500 крупных, а так же, не менее 2500
-                средних и малых проектов. Используя знания и накопленный опыт мы можем предложить </p>
-            <button class="banner__btn">
-                Попробовать бесплатно
-                <span></span>
-            </button>
+        <div class="container banner__container">
+            <div class="banner__inner">
+                <h1 class="banner__title">
+                    Демо-версия
+                </h1>
+                <p class="banner__descr">За 18 лет деятельности было реализовано более 500 крупных, а так же, не менее 2500
+                    средних и малых проектов. Используя знания и накопленный опыт мы можем предложить </p>
+                <button class="banner__btn">
+                    Попробовать бесплатно
+                    <span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 7H17V17" stroke="#1F4284" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7 17L17 7" stroke="#1F4284" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                           
+                    </span>
+                </button>
+            </div>
+            <div class="banner__inner">
+                <!-- <img srcset="./src/images/image15mob.jpg 586w" sizes="(max-width: 586px) 280px" src="./src/images/image15.jpg" alt="Img" /> -->
+            </div>
         </div>
-        <div class="banner__inner">
-            <img srcset="./src/images/image15mob.jpg 586w" sizes="(max-width: 586px) 280px" src="./src/images/image15.jpg" alt="Img" />
         </div>
-    </div>
     <div class="modal-window modal">
         <div class="modal__login">
             <h2 class="modal__title">Войти в систему</h2>
 
             <form action="#" class="form modal__form">
-                <input class="form__input" type="email" name="email" id="email">
-                <input class="form__input" type="tel" name="phone" id="phone">
+                <input class="form__input" type="email" name="email" id="email" placeholder="Email/Телефон">
+                <input class="form__input" type="tel" name="phone" id="phone" placeholder="Пароль">
                 <label for="remide">
                     <input class="form__checkbox" type="checkbox" name="remind" id="remind">
                     <span>

@@ -1,0 +1,235 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-SemiBold.ttf");
+  font-weight: 600;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  background-color: #fff;
+}
+
+button {
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+}
+
+input {
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.banner {
+  padding: 36px 40px;
+}
+.banner__container {
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 24px;
+  overflow: hidden;
+}
+.banner__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #EBF0FA;
+  min-height: 455px;
+  height: 455px;
+}
+.banner__inner:first-child {
+  padding: 102px 72px;
+}
+.banner__inner:last-child {
+  background-image: url("../images/image15.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner__title {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 160%;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+  -webkit-text-fill-color: #1F4284;
+  margin-bottom: 16px;
+}
+.banner__descr {
+  max-width: 511px;
+  font-size: 17px;
+  line-height: 160%;
+  font-weight: 400;
+  color: #727272;
+  margin-bottom: 36px;
+}
+.banner__btn {
+  display: flex;
+  align-items: center;
+  padding: 12px 12px 12px 24px;
+  border-radius: 60px;
+  background-color: #244C98;
+  color: #fff;
+  border: none;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.banner__btn span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-left: 48px;
+  transition: transform 0.3s ease-in-out;
+}
+.banner__btn:hover span:not(svg) {
+  transform: scale(1.2);
+}
+
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal__login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 500px;
+  padding: 24px;
+  border: 1px solid #000;
+  background-color: #F0F4FC;
+}
+.modal__title {
+  color: #323232;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 18px;
+  align-self: flex-start;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.form__input {
+  padding: 24px;
+  background-color: #D7E2F6;
+  color: #1F4284;
+  font-weight: 18px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin-bottom: 4px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.form__input::-moz-placeholder {
+  color: #1F4284;
+}
+.form__input::placeholder {
+  color: #1F4284;
+}
+.form__input[type=tel] {
+  margin-bottom: 24px;
+}
+.form label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.form__checkbox {
+  position: absolute;
+  opacity: 0;
+}
+.form__checkbox ~ span {
+  color: #323232;
+  font-weight: 400;
+  font-size: 18px;
+  padding-left: 38px;
+  position: relative;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.form__checkbox ~ span::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  border: 2px solid #323232;
+  border-radius: 2px;
+  left: 0;
+  top: 2px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.form__checkbox ~ span::after {
+  position: absolute;
+  content: url("../images/svg/check.svg");
+  left: 6px;
+  top: -5px;
+  opacity: 0;
+}
+.form__checkbox:checked ~ span::after {
+  opacity: 1;
+}
+.form__link {
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #244C98;
+  margin-bottom: 36px;
+}
+.form__action {
+  display: flex;
+  flex-direction: column;
+}
+.form__btn {
+  padding: 18px 32px;
+  text-align: center;
+  border: 1px solid #244C98;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #244C98;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 4px;
+}
+.form .btn-login {
+  background-color: #244C98;
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */
