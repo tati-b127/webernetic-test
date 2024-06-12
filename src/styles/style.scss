@@ -49,10 +49,10 @@ input {
 
     &__container {
         border-radius: 10px;
-        box-shadow: $shadow;  
+        // box-shadow: $shadow;  
         display: grid;
         grid-template-columns: 50% 50%;
-        gap: 24px;  
+        // gap: 24px;  
         overflow: hidden;
     }
     &__inner {
@@ -66,7 +66,7 @@ input {
             padding: 102px 72px;
         }
         &:last-child {
-            background-image: url('../images/image15.jpg');
+            background-image: url('../images/image15.jpg'), linear-gradient(#E8EDFF, #e1e6fa);
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -76,11 +76,11 @@ input {
         font-size: 30px;
         font-weight: 500;
         line-height: 160%;
-        text-shadow: $shadow;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: #000;
+        // text-shadow: $shadow;
+        // -webkit-text-stroke-width: 1px;
+        // -webkit-text-stroke-color: #000;
         // text-stroke: 1px #000;
-        -webkit-text-fill-color: #1F4284;
+        // -webkit-text-fill-color: #1F4284;
         // color: #000;
         // -webkit-text-stroke: 1px #000;
         margin-bottom: 18px;
@@ -102,7 +102,7 @@ input {
         background-color: #244C98;
         color: #fff;
         border: none;
-        text-shadow: $shadow;
+        // text-shadow: $shadow;
         span {
             display: flex;
             align-items: center;
@@ -195,7 +195,7 @@ input {
         border: none;
         outline: none;
         margin-bottom: 4px;
-        box-shadow: $shadow;
+        // box-shadow: $shadow;
         transition: background-color 0.3s ease-in;
         &::placeholder {
             color: #1F4284;
@@ -204,13 +204,18 @@ input {
             margin-bottom: 24px;
         }
         &:focus-within {
-            background-color: #F0F4FC;
+            background-color: #FFF;
+        }
+        &.error {
+            position: relative;
+            border: 1px solid #d40000;
         }
     }
     label {
         display: flex;
         align-items: center;
         margin-bottom: 24px;
+        margin-top: 24px;
     }
     &__checkbox {
         position: absolute;
@@ -225,7 +230,7 @@ input {
             font-size: 18px;
             padding-left: 38px;
             position: relative;
-            text-shadow: $shadow;
+            // text-shadow: $shadow;
             &::before {
                 content: "";
                 position: absolute;
@@ -237,13 +242,13 @@ input {
                 left: 0;
                 top: 2px;
                 box-sizing: border-box;
-                box-shadow: $shadow;
+                // box-shadow: $shadow;
             }
             &::after {
                 position: absolute;
                 content: url('../images/svg/check.svg');
                 left: 6px;
-                top: -5px;
+                top: -4px;
                 opacity: 0;
             }
         }
@@ -284,7 +289,7 @@ input {
         border-radius: 4px;
         background-color: transparent;
         color: #244C98;
-        box-shadow: $shadow;
+        // box-shadow: $shadow;
         margin-bottom: 4px;
         transition: all 0.3s ease-in;
     }

@@ -1,13 +1,9 @@
 @media (max-width: 1500px) {
   .banner__container {
-    gap: 0;
     box-shadow: none;
   }
   .banner__inner {
     height: auto;
-  }
-  .banner__inner:last-child {
-    border: 1px solid #000;
   }
   .banner__title {
     font-size: 26px;
@@ -31,9 +27,6 @@
     height: auto;
     min-height: -moz-min-content;
     min-height: min-content;
-  }
-  .banner__inner:last-child {
-    border: none;
   }
 }
 @media (max-width: 768px) {

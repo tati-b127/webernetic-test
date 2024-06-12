@@ -1,14 +1,14 @@
 @media (max-width: 1500px) {
     .banner {
         &__container {
-            gap: 0;
+            // gap: 0;
             box-shadow: none;
         }
         &__inner {
             height: auto;
-            &:last-child {
-                border: 1px solid #000;
-            }
+            // &:last-child {
+            //     border: 1px solid #000;
+            // }
         }
         &__title {
             font-size: 26px;
@@ -33,9 +33,9 @@
         &__inner {
             height: auto;
             min-height: min-content;
-            &:last-child {
-                border: none;
-            }
+            // &:last-child {
+            //     border: none;
+            // }
         }
 
     }

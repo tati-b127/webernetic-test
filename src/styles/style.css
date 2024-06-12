@@ -49,10 +49,8 @@ input {
 }
 .banner__container {
   border-radius: 10px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   display: grid;
   grid-template-columns: 50% 50%;
-  gap: 24px;
   overflow: hidden;
 }
 .banner__inner {
@@ -67,7 +65,7 @@ input {
   padding: 102px 72px;
 }
 .banner__inner:last-child {
-  background-image: url("../images/image15.jpg");
+  background-image: url("../images/image15.jpg"), linear-gradient(#E8EDFF, #e1e6fa);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -76,10 +74,6 @@ input {
   font-size: 30px;
   font-weight: 500;
   line-height: 160%;
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #000;
-  -webkit-text-fill-color: #1F4284;
   margin-bottom: 18px;
 }
 .banner__descr {
@@ -98,7 +92,6 @@ input {
   background-color: #244C98;
   color: #fff;
   border: none;
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 .banner__btn span {
   display: flex;
@@ -193,7 +186,6 @@ input {
   border: none;
   outline: none;
   margin-bottom: 4px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   transition: background-color 0.3s ease-in;
 }
 .form__input::-moz-placeholder {
@@ -206,12 +198,17 @@ input {
   margin-bottom: 24px;
 }
 .form__input:focus-within {
-  background-color: #F0F4FC;
+  background-color: #FFF;
+}
+.form__input.error {
+  position: relative;
+  border: 1px solid #d40000;
 }
 .form label {
   display: flex;
   align-items: center;
   margin-bottom: 24px;
+  margin-top: 24px;
 }
 .form__checkbox {
   position: absolute;
@@ -227,7 +224,6 @@ input {
   font-size: 18px;
   padding-left: 38px;
   position: relative;
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 .form__checkbox ~ span::before {
   content: "";
@@ -240,13 +236,12 @@ input {
   left: 0;
   top: 2px;
   box-sizing: border-box;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 .form__checkbox ~ span::after {
   position: absolute;
   content: url("../images/svg/check.svg");
   left: 6px;
-  top: -5px;
+  top: -4px;
   opacity: 0;
 }
 .form__checkbox:checked ~ span::after {
@@ -277,7 +272,6 @@ input {
   border-radius: 4px;
   background-color: transparent;
   color: #244C98;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 4px;
   transition: all 0.3s ease-in;
 }
@@ -297,14 +291,10 @@ input {
 
 @media (max-width: 1500px) {
   .banner__container {
-    gap: 0;
     box-shadow: none;
   }
   .banner__inner {
     height: auto;
-  }
-  .banner__inner:last-child {
-    border: 1px solid #000;
   }
   .banner__title {
     font-size: 26px;
@@ -328,9 +318,6 @@ input {
     height: auto;
     min-height: -moz-min-content;
     min-height: min-content;
-  }
-  .banner__inner:last-child {
-    border: none;
   }
 }
 @media (max-width: 768px) {

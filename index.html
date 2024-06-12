@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webernetic Test Task</title>
     <link rel="stylesheet" href="./src/styles/style.css">
-    <script src="./src/scripts/main.js"></script>
+    <script defer src="./src/scripts/main.js"></script>
 </head>
 
 <body>
@@ -44,8 +44,8 @@
             <h2 class="modal__title">Войти в систему</h2>
 
             <form action="#" class="form modal__form">
-                <input class="form__input" type="email" name="email" id="email" placeholder="Email/Телефон">
-                <input class="form__input" type="tel" name="phone" id="phone" placeholder="Пароль">
+                <input class="form__input" type="text" name="login" id="login" placeholder="Email/Телефон">
+                <input class="form__input" type="password" name="password" id="password" placeholder="Пароль">
                 <label for="remide">
                     <input class="form__checkbox" type="checkbox" name="remind" id="remind">
                     <span>
@@ -54,8 +54,8 @@
                 </label>
                 <a href="#" class="form__link">Восстановить</a>
                 <div class="form__action">
-                    <button class="form__btn btn-login">Войти</button>
-                    <button class="form__btn btn-reg">Зарегестрироваться</button>
+                    <button type="button" class="form__btn btn-login">Войти</button>
+                    <button tupe="button" class="form__btn btn-reg">Зарегестрироваться</button>
                 </div>
             </form>
         </div>
