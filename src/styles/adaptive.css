@@ -1,17 +1,10 @@
 @media (max-width: 1500px) {
-  .banner__container {
-    box-shadow: none;
-  }
   .banner__inner {
     height: auto;
   }
   .banner__title {
     font-size: 26px;
     color: #1F4284;
-    text-shadow: none;
-    -webkit-text-stroke-width: unset;
-    -webkit-text-stroke-color: transparent;
-    -webkit-text-fill-color: unset;
   }
   .banner__btn {
     text-shadow: none;

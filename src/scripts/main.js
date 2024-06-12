@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   modalCls.addEventListener("click", () => {
     clearForm();
+    clearErr();
     modal.classList.remove("show");
   });
 

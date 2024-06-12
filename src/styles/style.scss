@@ -16,7 +16,6 @@
 @mixin shadow {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);    
 }
-$shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 * {
     margin: 0;
     padding: 0;
@@ -49,10 +48,8 @@ input {
 
     &__container {
         border-radius: 10px;
-        // box-shadow: $shadow;  
         display: grid;
         grid-template-columns: 50% 50%;
-        // gap: 24px;  
         overflow: hidden;
     }
     &__inner {
@@ -76,13 +73,7 @@ input {
         font-size: 30px;
         font-weight: 500;
         line-height: 160%;
-        // text-shadow: $shadow;
-        // -webkit-text-stroke-width: 1px;
-        // -webkit-text-stroke-color: #000;
-        // text-stroke: 1px #000;
-        // -webkit-text-fill-color: #1F4284;
-        // color: #000;
-        // -webkit-text-stroke: 1px #000;
+        color: #1F4284;
         margin-bottom: 18px;
 
     }
@@ -102,7 +93,6 @@ input {
         background-color: #244C98;
         color: #fff;
         border: none;
-        // text-shadow: $shadow;
         span {
             display: flex;
             align-items: center;
@@ -195,7 +185,6 @@ input {
         border: none;
         outline: none;
         margin-bottom: 4px;
-        // box-shadow: $shadow;
         transition: background-color 0.3s ease-in;
         &::placeholder {
             color: #1F4284;
@@ -230,7 +219,6 @@ input {
             font-size: 18px;
             padding-left: 38px;
             position: relative;
-            // text-shadow: $shadow;
             &::before {
                 content: "";
                 position: absolute;
@@ -242,7 +230,6 @@ input {
                 left: 0;
                 top: 2px;
                 box-sizing: border-box;
-                // box-shadow: $shadow;
             }
             &::after {
                 position: absolute;
@@ -252,8 +239,6 @@ input {
                 opacity: 0;
             }
         }
-
-
     }
     &__checkbox:checked {
 
@@ -289,7 +274,6 @@ input {
         border-radius: 4px;
         background-color: transparent;
         color: #244C98;
-        // box-shadow: $shadow;
         margin-bottom: 4px;
         transition: all 0.3s ease-in;
     }
