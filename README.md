@@ -1,5 +1,5 @@
 # webernetic-test
-ГОТОВОЕ ЗАДАНИЕ: https://github.com/tati-b127.github.io/webernetic-test/
+ГОТОВОЕ ЗАДАНИЕ: [https://github.com/tati-b127.github.io/webernetic-test/](https://tati-b127.github.io/webernetic-test/)
 
 ## В рамках тестового задания необходимо выполнить следующие требования:
 
