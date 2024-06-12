@@ -80,7 +80,7 @@ input {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000;
   -webkit-text-fill-color: #1F4284;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 .banner__descr {
   max-width: 511px;
@@ -109,10 +109,20 @@ input {
   background-color: #fff;
   border-radius: 50%;
   margin-left: 48px;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
 }
-.banner__btn:hover span:not(svg) {
+.banner__btn span svg path {
+  transition: all 0.2s ease-in;
+}
+.banner__btn:hover span svg {
   transform: scale(1.2);
+}
+.banner__btn:hover span svg path {
+  stroke: #323232;
+}
+.banner__btn:hover span {
+  transform: scale(1.1);
+  background-color: #D7E2F6;
 }
 
 .modal {
@@ -125,12 +135,17 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
+  display: none;
+}
+.modal.show {
+  display: flex;
 }
 .modal__login {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 500px;
+  max-width: 500px;
+  width: 500px;
   padding: 24px;
   border: 1px solid #000;
   background-color: #F0F4FC;
@@ -142,6 +157,26 @@ input {
   margin-bottom: 18px;
   align-self: flex-start;
 }
+.modal__cls {
+  width: 52px;
+  height: 52px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: none;
+  align-self: flex-end;
+  padding: 14px;
+  transition: background-color 0.3s ease-in;
+}
+.modal__cls svg path {
+  stroke: #000;
+  transition: all 0.3s ease-in;
+}
+.modal__cls:hover {
+  background-color: #D7E2F6;
+}
+.modal__cls:hover svg path {
+  stroke: #1F4284;
+}
 
 .form {
   display: flex;
@@ -149,6 +184,7 @@ input {
   width: 100%;
 }
 .form__input {
+  width: 100%;
   padding: 24px;
   background-color: #D7E2F6;
   color: #1F4284;
@@ -158,6 +194,7 @@ input {
   outline: none;
   margin-bottom: 4px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease-in;
 }
 .form__input::-moz-placeholder {
   color: #1F4284;
@@ -168,6 +205,9 @@ input {
 .form__input[type=tel] {
   margin-bottom: 24px;
 }
+.form__input:focus-within {
+  background-color: #F0F4FC;
+}
 .form label {
   display: flex;
   align-items: center;
@@ -176,6 +216,10 @@ input {
 .form__checkbox {
   position: absolute;
   opacity: 0;
+  z-index: 100;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
 }
 .form__checkbox ~ span {
   color: #323232;
@@ -209,11 +253,18 @@ input {
   opacity: 1;
 }
 .form__link {
+  align-self: flex-start;
   font-size: 20px;
   font-weight: 500;
   text-decoration: none;
   color: #244C98;
   margin-bottom: 36px;
+  transition: all 0.3s ease-in;
+  border-bottom: 1px solid transparent;
+}
+.form__link:hover {
+  color: #323232;
+  border-bottom: 1px solid #727272;
 }
 .form__action {
   display: flex;
@@ -228,8 +279,106 @@ input {
   color: #244C98;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 4px;
+  transition: all 0.3s ease-in;
 }
 .form .btn-login {
   background-color: #244C98;
   color: #fff;
+}
+.form .btn-login:hover {
+  background-color: #323232;
+  border-color: #323232;
+}
+.form .btn-reg:hover {
+  background-color: #323232;
+  color: #fff;
+  border-color: #323232;
+}
+
+@media (max-width: 1500px) {
+  .banner__container {
+    gap: 0;
+    box-shadow: none;
+  }
+  .banner__inner {
+    height: auto;
+  }
+  .banner__inner:last-child {
+    border: 1px solid #000;
+  }
+  .banner__title {
+    font-size: 26px;
+    color: #1F4284;
+    text-shadow: none;
+    -webkit-text-stroke-width: unset;
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-fill-color: unset;
+  }
+  .banner__btn {
+    text-shadow: none;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 1120px) {
+  .banner__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 500px;
+  }
+  .banner__inner {
+    height: auto;
+    min-height: -moz-min-content;
+    min-height: min-content;
+  }
+  .banner__inner:last-child {
+    border: none;
+  }
+}
+@media (max-width: 768px) {
+  .banner {
+    padding: 24px;
+  }
+  .banner__container {
+    grid-template-rows: auto 360px;
+  }
+  .banner__title {
+    font-size: 20px;
+  }
+  .banner__descr {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+  .banner__inner:first-child {
+    padding: 24px;
+  }
+  .banner__inner:last-child {
+    background-position: center bottom;
+    background-size: contain;
+  }
+  .banner__btn {
+    font-size: 15px;
+    padding: 10px 10px 10px 18px;
+  }
+  .banner__btn span {
+    width: 36px;
+    height: 36px;
+  }
+}
+@media (max-width: 450px) {
+  .banner {
+    padding: 24px;
+  }
+  .banner__container {
+    grid-template-rows: auto 220px;
+  }
+  .banner__inner:last-child {
+    background-image: url("../images/image15mob.jpg");
+    background-position: center bottom;
+    background-size: cover;
+  }
+  .banner__btn {
+    width: 100%;
+  }
+  .banner__btn span {
+    margin-left: auto;
+  }
 }/*# sourceMappingURL=style.css.map */

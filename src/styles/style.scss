@@ -83,7 +83,7 @@ input {
         -webkit-text-fill-color: #1F4284;
         // color: #000;
         // -webkit-text-stroke: 1px #000;
-        margin-bottom: 16px;
+        margin-bottom: 18px;
 
     }
     &__descr {
@@ -112,10 +112,20 @@ input {
             background-color: #fff;
             border-radius: 50%;
             margin-left: 48px;
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
+            svg path {
+                transition: all 0.2s ease-in;
+            }
         }
-        &:hover span:not(svg) {
+        &:hover span svg {
             transform: scale(1.2);
+            & path {
+                stroke: #323232;
+            }
+        }
+        &:hover span {
+            transform: scale(1.1);
+            background-color: #D7E2F6;
         }
     }
 }
@@ -129,11 +139,16 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
+    display: none;
+    &.show {
+        display: flex;
+    }
     &__login  {
         display: flex;
         flex-direction: column;
         align-items: center;
-        min-width: 500px;
+        max-width: 500px;
+        width: 500px;
         padding: 24px;
         border: 1px solid #000;
         background-color: #F0F4FC;
@@ -145,13 +160,33 @@ input {
         margin-bottom: 18px;
         align-self: flex-start;
     }
-
+    &__cls {
+        width: 52px;
+        height: 52px;
+        background-color: #fff;
+        border-radius: 10px;
+        border: none;
+        align-self: flex-end;
+        padding: 14px;
+        transition: background-color 0.3s ease-in;
+        svg path {
+            stroke: #000;
+            transition: all 0.3s ease-in;
+        }
+        &:hover {
+            background-color: #D7E2F6;
+            svg path {
+                stroke: #1F4284;
+            }
+        }
+    }
 }
 .form {
     display: flex;
     flex-direction: column;
     width: 100%;
     &__input {
+        width: 100%;
         padding: 24px;
         background-color: #D7E2F6;
         color: #1F4284;
@@ -161,11 +196,15 @@ input {
         outline: none;
         margin-bottom: 4px;
         box-shadow: $shadow;
+        transition: background-color 0.3s ease-in;
         &::placeholder {
             color: #1F4284;
         }
         &[type="tel"] {
             margin-bottom: 24px;
+        }
+        &:focus-within {
+            background-color: #F0F4FC;
         }
     }
     label {
@@ -176,6 +215,10 @@ input {
     &__checkbox {
         position: absolute;
         opacity: 0;
+        z-index: 100;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
         & ~ span {
             color: #323232;
             font-weight: 400;
@@ -208,6 +251,7 @@ input {
 
     }
     &__checkbox:checked {
+
         & ~ span {
             &::after {
                 opacity: 1;
@@ -216,11 +260,18 @@ input {
     }
 
     &__link {
+        align-self: flex-start;
         font-size: 20px;
         font-weight: 500;
         text-decoration: none;
         color: #244C98;
         margin-bottom: 36px;
+        transition: all 0.3s ease-in;
+        border-bottom: 1px solid transparent;
+        &:hover {
+            color: #323232;
+            border-bottom: 1px solid #727272;
+        }
     }
     &__action {
         display: flex;
@@ -235,9 +286,23 @@ input {
         color: #244C98;
         box-shadow: $shadow;
         margin-bottom: 4px;
+        transition: all 0.3s ease-in;
     }
     .btn-login {
         background-color: #244C98;
         color: #fff;
+        &:hover {
+            background-color: #323232;
+            border-color: #323232;
+        }
+    }
+    .btn-reg {
+        &:hover {
+            background-color: #323232;
+            color: #fff;
+            border-color: #323232;
+        }
     }
 }
+
+@import './adaptive.scss'
